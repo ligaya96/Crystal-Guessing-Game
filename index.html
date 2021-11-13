@@ -10,18 +10,40 @@
     <title>Guess the word!</title>
     
 </head>
-
 <body>
- <!-- Timer box? -->
- <!-- Word Enter Box -->
- <!--  Win and Lose Box  -->
-
- <button type="button" class="btn btn-danger">Reset??</button>
- <!--  Reset Button-->
-
-
-
+    <header>
+        <div class="jumbotron">
+            <h1 class="display-4"> Guess the Tech Word!</h1>
+            <!-- intro to the game and expliaiing that it a tech game  -->
+            <a class="btn btn-primary btn-lg" class = "start btn-success">Start</a>
+          </div>
+    </header>
+  <main> 
+        <!-- Word Enter card-->
+       <div class = "card words">
+        <div class = "large-font word-guess"> M_S_L</div>
+         </div>
+    <section>
+      <!--  Win and Lose Box  -->
+      <div class = "card results">
+      <div class = "results container"> 
+      <div>
+          <h2 class = "wins"> Wins : 0 </h2>
+          <h2 class = "losses">Losses : 0</h2>
+      </div>
+     </div>
+       </div>
+       <!-- Timer box? -->
+       <div class = "timer card"> 
+        <div class = "timer-text">
+         <div class = "timer-count">10</div>
+         <h3 class = "large-font"> Remaining time </h3>
+        </div>
+        </div>
+       <!--  Reset Button-->
+      <button type="button" class="reset-btn btn-danger">Reset??</button>
+    </section>
+    </main>
+  <script src = "./assets/script.js"> </script>
 </body>
-<script src = "./assets/script.js"> </script>
-
 </html>

@@ -1,6 +1,65 @@
 /* Color scheme */
-/*  Blue and Green and have the boxes be white or grey */
+/* Aquamarine and have the boxes be white or grey */
 /* look into timer */
+header {
+    padding: 40px;
+    text-align: center;
+    background-color: beige;
+    border-bottom:30px #879274;
+  }
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
     background-color: aquamarine;
 }
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+ .words {
+    width: 55vw;
+    height: 400px;
+  }
+  .card {
+    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187, 33, 33, 0.604) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(73, 73, 73, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+.large-font {
+    font-size: 3.5em;
+    text-align:center;
+  }
+.results-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+.timer-text {
+    padding: 55px;
+}
+.timer {
+    height: 240px;
+    padding: 10px;
+    background: #0f423e;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/*  reset button  */
+.reset-btn {
+    font-size: 12px;
+    width: 20ox;
+    height: 30px;
+    line-height: 8px;
+    margin-top: 20px;
+  }
