@@ -10,6 +10,7 @@ var lost = document.querySelector(".losses");
 var startBtn = document.querySelector(".Start");
 var WordGuess = document.querySelector("word-guess");
 var timerElm = document.querySelector(".timer-count");
+var resetBtn = document.querySelector(".reset-btn");
 var numBlanks = 0;
 var winCounts = 0;
 var lostCounts = 0;
@@ -130,11 +131,31 @@ function checkwins(){
     }
 }
 // .addeventlistner to list for key events 
+document.addEventListener("keydown", function(event){
+    if ( timerCounter === 0 ){
+        return;
+    }
+    var key = event.key.toLowerCase();
+    var alphaNumChar = "abcdefghijklmnopqrstuvwxyz0123456789". split("");
+    if (alphaNumChar.includes(key)) {
+        var guessedLetters = event.key;
+        checkWords(guessedLetters)
+        checkwins();
+    }
+});
+// click addeventlistner on start button 
+startBtn.addEventListener("click", startGame);
 
-// click listner on start button and reset button
+
+ // checking to see if reset btn works
+ resetBtn.addEventListener("click", reset);
+
 // reset button and win and lose count 
 function reset() {
-
+    winCounts = 0;
+    lostCounts = 0;
+    setWins()
+    setLost()
 }
 
 
