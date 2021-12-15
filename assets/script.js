@@ -115,7 +115,7 @@ function checkWords(letters) {
         }
     }
     if (letterinWords){
-        for ( var j = 0 , numBlanks; j++){
+        for ( var j = 0; j < numBlanks; j++) {
             if(wordChoice[j] === letters) {
             blankWords[j] = letters;
             }
