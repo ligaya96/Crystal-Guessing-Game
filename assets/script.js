@@ -7,7 +7,7 @@ var blankWords= [];
 // Queryselectors
 var win = document.querySelector(".wins");
 var lost = document.querySelector(".losses");
-var startBtn = document.querySelector(".Start");
+var startBtn = document.querySelector(".start");
 var WordGuess = document.querySelector("word-guess");
 var timerElm = document.querySelector(".timer-count");
 var resetBtn = document.querySelector(".reset-btn");
@@ -23,6 +23,9 @@ function beginGame(){
     getWins();
     getLost();
 }
+ // click addeventlistner on start button 
+ startBtn.addEventListener("click", startGame);
+
 
     //renderword blanks 
 function startGame(){
@@ -105,7 +108,7 @@ function getLost () {
     } else {
     lostCounts = lostScored;
     }
-    lose.textContent = lostCounts;
+    lost.textContent = lostCounts;
 }
 // function to check letter and check if win
 function checkWords(letters) {
@@ -144,19 +147,20 @@ document.addEventListener("keydown", function(event){
     }
 });
 // click addeventlistner on start button 
-startBtn.addEventListener("click", startGame);
+ startBtn.addEventListener("click", startGame);
 
 
  // checking to see if reset btn works
  resetBtn.addEventListener("click", reset);
 
 // reset button and win and lose count 
-function reset() {
+ function reset() {
     winCounts = 0;
     lostCounts = 0;
     setWins()
     setLost()
 }
+beginGame();
 
 
 
