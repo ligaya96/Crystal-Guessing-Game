@@ -8,7 +8,7 @@ var blankWords= [];
 var win = document.querySelector(".wins");
 var lost = document.querySelector(".losses");
 var startBtn = document.querySelector(".start");
-var WordGuess = document.querySelector("word-guess");
+var WordGuess = document.querySelector(".word-guess");
 var timerElm = document.querySelector(".timer-count");
 var resetBtn = document.querySelector(".reset-btn");
 var numBlanks = 0;
@@ -34,7 +34,7 @@ function startGame(){
     startBtn.disabled = true;
     // begin timer and render the blanks 
     renderBlanks();
-    timer();
+    startTime();
 
 }
 // function for winning the game 
@@ -46,14 +46,14 @@ function Winner(){
 }
 // function for Losing the game
 function Loser(){
-    WordGuess.textcontent = "You Lose! ";
+    WordGuess.textcontent = "You Lose!";
     lostCounts ++
     startBtn.disabled = false;
     setLost()
 }
 
 // Time interval set to start and triggers 
-function startTimer() {
+function startTime() {
     // set timer
     timer = setInterval(function(){
         timerCounter--;
@@ -72,7 +72,7 @@ function startTimer() {
 }
 // renders blanks 
 function renderBlanks(){
-    wordChoice = wordlist[Math.floor(Math.random() * words.length)];
+    wordChoice = wordlist[Math.floor(Math.random() * wordlist.length)];
     lettersChosen = wordChoice.split("");
     numBlanks = lettersChosen.length;
     blankWords = []
@@ -80,7 +80,7 @@ function renderBlanks(){
     for ( var i = 0; i < numBlanks; i++){
         blankWords.push("_");
     }
-    WordGuess.textContent = blankWords.join(" ")  
+    WordGuess.textContent = blankWords.join(" ")
 }
 //.localstorage.getitem for wins and displaying win counts 
 // .localstorage.setitem for lost
