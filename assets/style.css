@@ -1,11 +1,14 @@
 /* Color scheme */
 /* Aquamarine and have the boxes be white or grey */
 /* look into timer */
+* {
+  box-sizing: border-box;
+}
 header {
     padding: 40px;
     text-align: center;
-    background-color: beige;
-    border-bottom:30px #879274;
+    background: rgb(65, 71, 161);
+    border-bottom:30px #9d5cb4;
   }
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -14,7 +17,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: aquamarine;
+    background-color: blueviolet;
 }
 main {
     display: flex;
@@ -25,9 +28,16 @@ main {
     width: 55vw;
     height: 400px;
   }
+  .start {
+    font-size: 25px;
+    width: 20ox;
+    color: salmon;
+    background-color: slateblue;
+    
+  }
   .card {
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187, 33, 33, 0.604) 100%);
-    border: 1px solid #eceff1;
+    background: radial-gradient(circle, rgb(64, 170, 112) 0%, rgba(187, 33, 33, 0.604) 100%);
+    border: 1px solid #19744f;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
       rgba(73, 73, 73, 0.15) 0 2px 4px 3px;
@@ -54,7 +64,9 @@ main {
     color: rgb(255, 255, 255);
     text-align: center;
 }
-
+.jumbotron{
+background-color: rgb(136, 57, 136);
+}
 /*  reset button  */
 .reset-btn {
     font-size: 12px;
@@ -63,3 +75,6 @@ main {
     line-height: 8px;
     margin-top: 20px;
   }
+.display-4 {
+  background-color: turquoise;
+}
