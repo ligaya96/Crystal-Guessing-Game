@@ -1,4 +1,4 @@
-# Word-Guess-Game
+# Crystal-Guessing-Game
 a quick DOM and API Word guessing game
 
 A fun Crystal guessing Game! 
