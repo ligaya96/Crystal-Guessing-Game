@@ -1,5 +1,7 @@
 # Crystal-Guessing-Game
-a quick DOM and API Word guessing game
+A Quick and Fun Crystal guessing Game! 
+ 
+Tools Used : BootStrap. WebAPis, and Doms 
 
-A fun Crystal guessing Game! 
-Tools used : BootStrap , Web APIs, 
+
+ https://ligaya96.github.io/Crystal-Guessing-Game/

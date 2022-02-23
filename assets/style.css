@@ -69,7 +69,7 @@ background-color: rgb(136, 57, 136);
 }
 /*  reset button  */
 .reset-btn {
-    font-size: 12px;
+    font-size: 15px;
     width: 20ox;
     height: 30px;
     line-height: 8px;
@@ -77,4 +77,10 @@ background-color: rgb(136, 57, 136);
   }
 .display-4 {
   background-color: turquoise;
+}
+.crystalInfo{
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: yellow;
 }

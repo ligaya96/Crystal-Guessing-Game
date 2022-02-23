@@ -1,5 +1,5 @@
 // Crystal Words Arrays 
-var wordlist = ["Onyx", "Diamond", "Obsidain", "Quartz", "Jade", "Peridot"]
+var wordlist = ["onyx", "diamond", "obsidain", "quartz", "jade", "peridot"]
 //Empty Arrays to create blanks and letter 
 var lettersChosen = [];
 var blankWords= []; 
@@ -27,10 +27,10 @@ function beginGame(){
  startBtn.addEventListener("click", startGame);
 
 
-    //renderword blanks 
+  //renderword blanks 
 function startGame(){
     isWinner = false;
-    timerCounter = 10;
+    timerCounter = 12;
     startBtn.disabled = true;
     // begin timer and render the blanks 
     renderBlanks();
@@ -38,16 +38,16 @@ function startGame(){
 
 }
 // function for winning the game 
-function Winner(){
+function Winner() {
     WordGuess.textcontent = "You Win!! Yay";
-    winCounts ++
+    winCounts++
     startBtn.disabled = false;
     setWins()
 }
 // function for Losing the game
-function Loser(){
+function Loser() {
     WordGuess.textcontent = "You Lose!";
-    lostCounts ++
+    lostCounts++
     startBtn.disabled = false;
     setLost()
 }
@@ -65,13 +65,16 @@ function startTime() {
             }
         }
         if (timerCounter === 0 ) {
+            //fixed
             clearInterval(timer);
             Loser();
         }
     }, 1000);
 }
+//fix / debug
+
 // renders blanks 
-function renderBlanks(){
+function renderBlanks() {
     wordChoice = wordlist[Math.floor(Math.random() * wordlist.length)];
     lettersChosen = wordChoice.split("");
     numBlanks = lettersChosen.length;
@@ -103,10 +106,10 @@ function getWins(){
 }
 function getLost () {
     var lostScored = localStorage.getItem("lostCounts");
-    if (lostScored === null){
+    if (lostScored === null) {
         lostCounts = 0;
     } else {
-    lostCounts = lostScored;
+       lostCounts = lostScored;
     }
     lost.textContent = lostCounts;
 }
@@ -114,7 +117,7 @@ function getLost () {
 function checkWords(letters) {
     var letterinWords = false;
     for (var i = 0 ; i < numBlanks; i++) {
-        if ( wordChoice[i] === letters) {
+        if (wordChoice[i] === letters) {
             letterinWords = true;
         }
     }
@@ -129,7 +132,7 @@ function checkWords(letters) {
 }
 //check letters to see if the letter the user press will populate 
 function checkwins(){
-    if (wordChoice === blankWords.join(" ")) {
+    if (wordChoice === blankWords.join("")) {
         isWinner = true;
     }
 }
@@ -148,10 +151,9 @@ document.addEventListener("keydown", function(event){
 });
 // click addeventlistner on start button 
  startBtn.addEventListener("click", startGame);
-
-
+ 
  // checking to see if reset btn works
- resetBtn.addEventListener("click", reset);
+  resetBtn.addEventListener("click", reset);
 
 // reset button and win and lose count 
  function reset() {
